@@ -29,8 +29,8 @@ export class Beach implements CameraTarget {
   
   private random(): number {
     const value: number = Math.floor( Math.random()*100 );
-    const direction: number = Math.floor( Math.random() );
-    if (direction)
+    const direction: number = Math.random();
+    if (direction > 0.5)
       return  value;
     else 
       return -1*value;

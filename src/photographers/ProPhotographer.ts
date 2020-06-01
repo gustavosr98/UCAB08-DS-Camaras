@@ -24,10 +24,11 @@ export class ProPhotographer implements Photographer {
     const camera = this.chooseCamera();
     const capturedImage = camera.captureImage(cameraTarget);
     
-    console.log(`It's me ${name}. I just took a photo of ${capturedImage.name}`);
+    console.log(`It's me ${this.name}. I just took a photo of ${capturedImage.name}`);
     console.log(`    | brightness: ${capturedImage.brightness}`);
     console.log(`    | contrast:   ${capturedImage.contrast}`);
     console.log(`    | saturation: ${capturedImage.saturation}`);
+    console.log("");
 
     return capturedImage;
   };
