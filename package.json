@@ -9,7 +9,7 @@
   "author": "Bowden Kelly",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node -w src/main.ts",
+    "start": "ts-node src/main.ts",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",

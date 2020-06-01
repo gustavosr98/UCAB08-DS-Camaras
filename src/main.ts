@@ -1,4 +1,4 @@
-import { CameraFactory, SonyCameraFactory, CannonCameraFactory } from "@/factories/CameraFactory";
+import { CameraFactory, SonyCameraFactory, CannonCameraFactory } from "./factories/CameraFactory";
 
 console.log("MAIN HAS STARTED");
 
