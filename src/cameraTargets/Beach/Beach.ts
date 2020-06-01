@@ -19,6 +19,8 @@ export class Beach implements CameraTarget {
       contrast: this.random(),
       brightness: this.random(),
     };
+
+    console.log(imageName);
     
     return image;
   };

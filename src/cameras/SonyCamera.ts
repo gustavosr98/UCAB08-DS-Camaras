@@ -26,8 +26,8 @@ export class SonyCamera implements Camera {
     // We decided that Sony does not modifies the contrast of the image
     const modifiedImage: Image = {
       ...rawImage,
-      brightness: Math.min(Math.max(rawImage.brightness + this.cameraConfiguration.brightnessDiff, 100) -100),
-      saturation: Math.min(Math.max(rawImage.saturation + this.cameraConfiguration.saturationDiff, 100) -100),
+      brightness: Math.min(Math.max(rawImage.brightness + this.cameraConfiguration.brightnessDiff, 100), -100),
+      saturation: Math.min(Math.max(rawImage.saturation + this.cameraConfiguration.saturationDiff, 100), -100),
     };
     return modifiedImage;
   }

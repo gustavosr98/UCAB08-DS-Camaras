@@ -25,7 +25,7 @@ export class CannonCamera implements Camera {
     // We decided that Cannon does only modifies the contrast of the image
     const modifiedImage: Image = {
       ...rawImage,
-      contrast: Math.min(Math.max(rawImage.contrast + this.cameraConfiguration.contrastDiff, 100) -100),
+      contrast: Math.min(Math.max(rawImage.contrast + this.cameraConfiguration.contrastDiff, 100), -100)
     };
     return modifiedImage;
   }

@@ -5,5 +5,5 @@ export interface Photographer {
   name: string;
   cameras: Camera[];
 
-  takePhoto(cameraTarget: CameraTarget): Image;
+  takePhoto(cameraToUse: Camera, cameraTarget: CameraTarget): Image;
 }

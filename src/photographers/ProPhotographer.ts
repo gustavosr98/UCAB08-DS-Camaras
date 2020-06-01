@@ -12,16 +12,8 @@ export class ProPhotographer implements Photographer {
   name: string;
   cameras: Camera[];
 
-  private chooseCamera(): Camera {
-    const camera = this.cameras[Math.floor(
-      Math.random() * this.cameras.length
-    )];
-    
-    return camera;
-  }
-
-  takePhoto(cameraTarget: CameraTarget): Image {
-    const camera = this.chooseCamera();
+  takePhoto(cameraToUse: Camera, cameraTarget: CameraTarget): Image {
+    const camera = this.cameras.find(c => c === cameraToUse) || cameraToUse;
     const capturedImage = camera.captureImage(cameraTarget);
     
     console.log(`It's me ${this.name}. I just took a photo of ${capturedImage.name}`);

@@ -13,21 +13,13 @@ console.log("MAIN HAS STARTED");
 
 const sonyFactory: CameraFactory = new SonyCameraFactory();  
 const cannonFactory: CameraFactory = new CannonCameraFactory();
-
-const createdCameras: Camera[] = [
-  sonyFactory.createCamera(),
-  cannonFactory.createCamera(),
-];
-
-const juanPhotographer: Photographer = new ProPhotographer("Juan", createdCameras);
-
+const juanPhotographer: Photographer = new ProPhotographer("Juan", [sonnyCamera, cannonCamera]);
 const cameraTarget: CameraTarget = new Beach();
 
-const imagesTakenByJuan: Image[] = [
-  juanPhotographer.takePhoto(cameraTarget),
-  juanPhotographer.takePhoto(cameraTarget),
-  juanPhotographer.takePhoto(cameraTarget)
-];
+const sonnyCamera: Camera = sonyFactory.createCamera();
+const cannonCamera: Camera =  cannonFactory.createCamera();
 
+const firstPhoto: Image = juanPhotographer.takePhoto(sonnyCamera, cameraTarget);
+const secondPhoto: Image = juanPhotographer.takePhoto(cannonCamera, cameraTarget);
 
 console.log("MAIN HAS ENDED ");

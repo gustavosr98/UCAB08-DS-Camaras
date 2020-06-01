@@ -7,3 +7,33 @@ Los fotografos de la vieja escuela han tenido que mejorar sus tecnicas para la c
 - El estudiante debe compartir el URL correspondiente al repositorio donde se aloja el codigo fuente para la implementación de la solución propuesta.
     - Considere incluir en este repositorio aquellos elementos graficos necesarios para documentar el diseño aplicado.
 - La tarea debe ser realizada en grupos de 3 estudiantes, recuerde identificar los autores en el documento.
+
+# Respuestas
+## Integrantes
+- Javier Andrade 
+- Gustavo Sánchez
+- Yeisson Venencia
+
+## Para correr el código
+1. ``` npm i ```
+2. ``` npm run start ```
+
+## Diagrama de clases
+Ubicado en /src/assets/DiagramaClases.png  
+
+<p align="center">
+  <img 
+  alt="DiagramaClases"
+  src="/src/assets/DiagramaClases.png">
+</p>
+
+En este diagrama de clases se puede observar la implementación del patrón de **Factory** como patrón creacional utilizado para la instanciación de `Cameras` de difentes marcas. Al mismo tiempo se puede observar el patrón **Template Method** para definir el comportamiento de `CameraTarget` y también del `Photographer`.
+
+## Diagrama de secuencia
+Ubicado en /src/assets/DiagramaSecuencia.png  
+
+<p align="center">
+  <img 
+  alt="DiagramaSecuencia"
+  src="/src/assets/DiagramaSecuencia.png">
+</p>
